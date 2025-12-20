@@ -38,9 +38,9 @@ fun AddPersonScreen(
             .padding(16.dp)
     ) {
 
-//        IconButton(onClick = { navController.popBackStack() }) {
-//            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-//        }
+        IconButton(onClick = { navController.popBackStack() }) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+        }
 
         TextField(value = firstName, onValueChange = { firstName = it }, label = { Text("Imię") })
         TextField(value = lastName, onValueChange = { lastName = it }, label = { Text("Nazwisko") })

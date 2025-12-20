@@ -28,9 +28,9 @@ fun ListPersonScreen(
 
     Column(modifier = Modifier.fillMaxSize()) {
 
-//        IconButton(onClick = { navController.popBackStack() }) {
-//            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-//        }
+        IconButton(onClick = { navController.popBackStack() }) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+        }
 
         LazyColumn {
             items(persons) { person ->
