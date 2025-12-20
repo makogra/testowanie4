@@ -51,7 +51,6 @@ fun AppNavigation(viewModel: PersonViewModel) {
             startDestination = "add",
             modifier = Modifier.padding(padding)
         ) {
-//            composable("main") { MainScreen(navController) }
             composable("add") { AddPersonScreen(navController, viewModel) }
             composable("list") { ListPersonScreen(navController, viewModel) }
             composable("delete") { DeletePersonScreen(navController, viewModel) }
