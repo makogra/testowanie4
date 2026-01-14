@@ -30,6 +30,10 @@ fun AddPersonScreen(
 ) {
     var firstName by remember { mutableStateOf("") }
     var lastName by remember { mutableStateOf("") }
+    var birthDate by remember { mutableStateOf("") }
+    var phone by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var address by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -43,6 +47,10 @@ fun AddPersonScreen(
 
         TextField(value = firstName, onValueChange = { firstName = it }, label = { Text("Imię") })
         TextField(value = lastName, onValueChange = { lastName = it }, label = { Text("Nazwisko") })
+        TextField(value = birthDate, onValueChange = { birthDate = it }, label = { Text("Data urodzenia") })
+        TextField(value = phone, onValueChange = { phone = it }, label = { Text("Telefon") })
+        TextField(value = email, onValueChange = { email = it }, label = { Text("Email") })
+        TextField(value = address, onValueChange = { address = it }, label = { Text("Adres") })
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -53,6 +61,10 @@ fun AddPersonScreen(
                     Person(
                         firstName = firstName,
                         lastName = lastName,
+                        birthDate = birthDate,
+                        phone = phone,
+                        email = email,
+                        address = address
                     )
                 )
                 navController.popBackStack()
